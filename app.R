@@ -1,12 +1,11 @@
-# app.R
 library(shiny)
 library(bslib)
 library(dplyr)
 library(stringr)
 library(stringi)
 library(DT)
-library(googlesheets4) # Package to connect to Google Sheets
-library(shinymanager)  # Package for the login and password screen
+library(googlesheets4) 
+library(shinymanager)
 
 # ---------------------------------------------
 # CONFIGURATION
@@ -168,6 +167,8 @@ ui <- secure_app(
     
     tags$head(
       tags$meta(name = "viewport", content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"),
+      tags$link(rel = "icon", type = "image/png", href = "icon.png"),
+      tags$link(rel = "apple-touch-icon", href = "icon.png"),
       tags$style(HTML("
         body { background: #F6F7FB; padding-top: 15px;}
         .card { border: 0; box-shadow: 0 4px 12px rgba(15, 23, 42, .05); border-radius: 12px; margin-bottom: 15px; }
