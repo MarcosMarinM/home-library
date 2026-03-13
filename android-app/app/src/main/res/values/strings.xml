@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Biblioteca</string>
+    <string name="sort_title">Orden: título</string>
+    <string name="sort_author">Orden: autor</string>
+    <string name="sort_location">Orden: ubicación</string>
+    <string name="sort_color">Orden: color</string>
+
+    <string-array name="sort_options">
+        <item>@string/sort_location</item>
+        <item>@string/sort_title</item>
+        <item>@string/sort_author</item>
+        <item>@string/sort_color</item>
+    </string-array>
+</resources>

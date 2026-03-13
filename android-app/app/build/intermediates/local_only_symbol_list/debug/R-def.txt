@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+array sort_options
+drawable ic_launcher_background
+id color_container
+id edit_query
+id progress
+id recycler
+id recycler_catalog
+id spinner_sort
+id swipe_refresh
+id tv_author
+id tv_extra
+id tv_status
+id tv_title
+layout activity_main
+layout dialog_catalog
+layout item_book
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+string sort_author
+string sort_color
+string sort_location
+string sort_title
+style Theme.LibrosApp
