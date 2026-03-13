@@ -4,16 +4,20 @@ Esta es una app Android nativa que **lee directamente la hoja de Google Sheets**
 
 ## Cómo configurar la hoja de datos
 
-1. Abre `app/src/main/java/com/marcosmarin/libros/data/SheetRepository.kt`.
-2. Cambia la constante `GOOGLE_SHEET_ID` por el ID de tu hoja de cálculo.
+1. Crea o edita el archivo `android-app/local.properties` (no se comparte en Git).
+2. Agrega una línea con el ID de tu hoja de cálculo:
 
-   Ejemplo de URL de Google Sheets:
+   ```properties
+   googleSheetId=1Wf...XYZ
+   ```
+
+   El ID es la parte que aparece en la URL de Google Sheets:
 
    ```txt
    https://docs.google.com/spreadsheets/d/1Wf...XYZ/edit#gid=0
    ```
 
-   El ID es la parte `1Wf...XYZ`.
+> ✅ El ID **no se almacena en el repositorio**: se inyecta en el APK mediante BuildConfig.
 
 ## Cómo ejecutar
 

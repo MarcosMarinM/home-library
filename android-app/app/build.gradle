@@ -1,7 +1,22 @@
+import java.util.Properties
+
 plugins {
     id "com.android.application"
     id "org.jetbrains.kotlin.android" version "1.9.20"
 }
+
+// Load values from android-app/local.properties (not committed).
+// This keeps the Google Sheet ID out of source control.
+def loadLocalProperties() {
+    def props = new Properties()
+    def localPropsFile = rootProject.file("local.properties")
+    if (localPropsFile.exists()) {
+        props.load(new FileInputStream(localPropsFile))
+    }
+    return props
+}
+
+def googleSheetId = loadLocalProperties().getProperty("googleSheetId", "")
 
 android {
     namespace "com.marcosmarin.libros"
@@ -15,6 +30,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject the Sheet ID via BuildConfig. Keep it out of the repo.
+        buildConfigField "String", "GOOGLE_SHEET_ID", "\"${googleSheetId}\""
     }
 
     buildTypes {
