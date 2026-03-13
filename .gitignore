@@ -1,4 +1,7 @@
 passwords.R
+android-app/local.properties
+android-app/.gradle/
+android-app/app/build/
 .DS_Store
 .Rproj.user
 .Rhistory
